@@ -1,7 +1,7 @@
 require 'telegram/bot'
 $LOAD_PATH << '.'
 require 'config.rb'
-
+puts 123
 Telegram::Bot::Client.run(Token) do |bot|
   bot.listen do |message|
     case message.text
