@@ -7,7 +7,7 @@ Telegram::Bot::Client.run(token) do |bot|
     when '/start'
       bot.api.send_message(
       chat_id:message.chat.id,
-      text:"Hello,#{message.from.first_name}")
+      text:"Hello Hello,#{message.from.first_name}")
     end
   end
 end
