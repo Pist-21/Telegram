@@ -1,7 +1,8 @@
 require 'telegram/bot'
+$LOAD_PATH << '.'
+require 'config.rb'
 
-
-Telegram::Bot::Client.run(token) do |bot|
+Telegram::Bot::Client.run(Token) do |bot|
   bot.listen do |message|
     case message.text
     when '/start'
