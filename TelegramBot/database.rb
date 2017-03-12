@@ -10,7 +10,9 @@ def dbconnect(dbname, day)
     return strlessons
   rescue
     puts "Error: wrong command! (dbname -> '#{dbname}' or day -> '#{day}')"
+    File.delete("database/#{dbname}.db")
+    return
   end
 end
 
-puts dbconnect('pist3','Friday')
+puts dbconnect('pist6','Friday')
