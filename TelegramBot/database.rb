@@ -2,11 +2,15 @@ require 'sqlite3'
 
 def dbconnect(dbname, day)
   strlessons = ""
-  db = SQLite3::Database.new "database/#{dbname}.db"
-  for i in db.execute("select * from #{day}")
-    strlessons = strlessons + i.to_s + "\n"
+  begin
+    db = SQLite3::Database.new "database/#{dbname}.db"
+      for i in db.execute("select * from #{day}")
+          strlessons = strlessons + i.to_s + "\n"
+      end
+    return strlessons
+  rescue
+    puts "Error: wrong command! (dbname -> '#{dbname}' or day -> '#{day}')"
   end
-  return strlessons
 end
 
-puts dbconnect('pist1','Friday')
+puts dbconnect('pist3','Friday')
