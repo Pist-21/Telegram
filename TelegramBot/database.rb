@@ -1,5 +1,4 @@
 require 'sqlite3'
-
 def dbconnect(dbname, day)
   strlessons = ""
   begin
@@ -11,8 +10,6 @@ def dbconnect(dbname, day)
   rescue
     puts "Error: wrong command! (dbname -> '#{dbname}' or day -> '#{day}')"
     File.delete("database/#{dbname}.db")
-    return
+    return "oops"
   end
 end
-
-puts dbconnect('pist6','Friday')
