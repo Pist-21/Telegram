@@ -7,7 +7,7 @@ def dbconnectday(dbname, day)
       for i in db.execute("select * from #{day}")
           strlessons = strlessons + i.to_s + "\n"
       end
-    return "Today is #{day}\n\n" + strlessons
+    return "#{day}\n\n" + strlessons
   rescue
     puts "Error: wrong command! (dbname -> '#{dbname}' or day -> '#{day}')"
     File.delete("database/#{dbname}.db")
