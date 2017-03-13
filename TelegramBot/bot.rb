@@ -1,6 +1,5 @@
 $LOAD_PATH << '.'
 require 'telegram/bot'
-#require 'sqlite3'
 require 'config.rb'
 require 'date'
 require 'sqlite3'
@@ -12,6 +11,7 @@ starttext = "Привіт. Я бот, який допоможе тобі діз�
 /today - розклад на сьогодні
 /day - розклад на заданий день
 /week - розклад на тиждень ".freeze
+
 currentday = Time.now.strftime('%A').to_s
 
 Telegram::Bot::Client.run(Token) do |bot|
@@ -21,11 +21,14 @@ Telegram::Bot::Client.run(Token) do |bot|
         bot.api.send_message(
         chat_id:message.chat.id,
         text:starttext)
-
       when '/today'
         bot.api.send_message(
         chat_id:message.chat.id,
-        text:dbconnect("pist1",currentday))
+        text:dbconnectday("pist1",currentday))
+      when '/week'
+        bot.api.send_message(
+        chat_id:message.chat.id,
+        text:dbconnectweek("pist1"))
     end
   end
 end
