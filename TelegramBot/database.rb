@@ -10,7 +10,6 @@ def dbconnectday(dbname, day)
     return "#{day}\n\n" + strlessons
   rescue
     puts "Error: wrong command! (dbname -> '#{dbname}' or day -> '#{day}')"
-    File.delete("database/#{dbname}.db")
     return "oops"
   end
 end
@@ -39,9 +38,9 @@ def dbconnectweek(dbname)
       for i in db.execute("select * from Friday")
           sFriday = sFriday + i.to_s + "\n"
       end
-      week = "Понеділок\n" + sMonday + "\n" + "Вівторок\n" + sThuesday + "\n" +
-              "Середа\n" + sWednesday + "\n" +
-              "Четвер\n" + sThursday + "\n" + "П'ятниця\n" + sFriday
+      week = "Понеділок\n #{sMonday}\nВівторок\n #{sThuesday}\n
+              Середа\n #{sWednesday} \nЧетвер\n #{sThursday}\n
+              П'ятниця\n #{sFriday}"
     return week
   rescue
     puts "Error: wrong command! (dbname -> '#{dbname}')"
