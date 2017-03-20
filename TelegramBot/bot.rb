@@ -8,6 +8,13 @@ require 'commands.rb'
 
 current_day = Time.now.strftime('%A').to_s
 
+def checkToken(token)
+  if token == '376993256:AAFpGwO_kYCzrYtZIssaw9fTzzWNihBJbWc'
+    return true
+  else return false
+  end
+end
+
 Telegram::Bot::Client.run(Token) do |bot|
   bot.listen do |message|
     case message.text
