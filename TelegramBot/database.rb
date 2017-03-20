@@ -15,7 +15,7 @@ def dbconnectday(dbname, day)
     return "oops"
   end
 end
-
+dbconnectday("ПІ-31", "Monday")
 def dbconnectweek(dbname)
   sMonday = ""
   sThuesday = ""
