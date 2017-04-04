@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +19,7 @@
 
 <!-- Stylesheet -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/preload.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
@@ -26,9 +27,14 @@
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    
+<body>
+<!--<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">-->
+<!-- Preloader -->
+<div id="page-pre" class="preloader">
+ <div class="loader"></div>
+</div>
 <!-- Navigation -->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
@@ -56,7 +62,9 @@
           <div class="intro-text">
             <h1>PIST21</h1>
             <p>Телеграм Бот</p>
-            <a href="#about" class="btn btn-custom btn-lg page-scroll">Про нас</a></div>
+            <a href="#about" class="btn btn-custom btn-lg page-scroll">Про нас</a>
+            <a href="" class="btn btn-custom btn-lg page-scroll">Реєстрація</a>
+            <a href="" class="btn btn-custom btn-lg page-scroll">Вхід</a>
         </div>
       </div>
     </div>
@@ -210,5 +218,6 @@
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
 <script type="text/javascript" src="js/contact_me.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
+<script src="js/preloader.js"></script>
 </body>
 </html>

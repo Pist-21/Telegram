@@ -213,7 +213,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	font-weight: 300;
 	margin-top: 0px;
 	margin-bottom: 5px;
-    font-family: 'Fira Sans'
+    font-family: 'Open Sans Condensed', 'Fira Sans', arial;
 }
 header .intro-text {
 	padding-top: 250px;
