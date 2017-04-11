@@ -1,4 +1,4 @@
-# This class will show your current status(numbers of labs)
+﻿# This class will show your current status(numbers of labs)
 class Status < Base
   def send_messages
     subject_name = @redis.hgetall("#{@user_id}-subject").keys
@@ -43,7 +43,7 @@ class Status < Base
       actual_arr = percent_elements(redis_subject_set, percent_labs)
       labs_count_arr << redis_subject_set.count
       text = actual_arr.join(" ")
-      telegram_send_message("#{subj}: #{text} - лабы") unless text.empty?
+      telegram_send_message("#{subj}: #{text}") unless text.empty?
     end
     output_labs_count(labs_count_arr)
   end
